@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Logo | Website Name</h2>
+            <nav>
+                <ul>
+                    <li><a href="#"> <img src="icons/house_5075735.png" alt="Home" style="width:36px; vertical-align:middle; margin-right:8px;"> Home</a></li>
+                    <li><a href="#"> <img src="icons/folder_4051306.png" alt="Home" style="width:36px; vertical-align:middle; margin-right:8px;"> My Files</a></li>
+                    <li><a href="#"> <img src="icons/message_4144845.png" alt="Home" style="width:36px; vertical-align:middle; margin-right:8px;"> Messages</a></li>
+                    <li><a href="#"> <img src="icons/moon_8880836.png" alt="Home" style="width:36px; vertical-align:middle; margin-right:8px;"> Log Out</a></li>
+                </ul>
+            </nav>
+            <div class="settings">
+                <a href="#"><img src="icons/settings_4151678.png" alt="Settings" style="width: 36px; vertical-align:middle; margin-right:8px;"> Settings</a>
+            </div>
+        </aside>
+        
+        <main class="chat-section">
+            <header class="chat-header">
+                <h2>Messages</h2>
+                <div class="user-controls">
+                    <button class="user-notifications">🕭</button>
+                    <button class="user-settings">User's Name</button>
+                </div>
+            </header>
+
+            <div class="chat-container">
+                <div class="message-list-wrapper">
+                    <div class="message-dropdown" onclick="toggleMessageList()">
+                        All Messages
+                        <button class="dropdown-toggle">▼</button>
+                    </div>
+                    <div class="message-list-container" id="messageList">
+                        <div class="search-bar">
+                            <input type="text" id="chatSearch" placeholder="⌕ Search for Chat">
+                        </div>
+                        <div class="message-list">
+                            <div class="chat-item">
+                                <span class="chat-badge red"></span>
+                                <p>Class ### - Professor (name)</p>
+                            </div>
+                            <div class="chat-item">
+                                <span class="chat-badge purple"></span>
+                                <p>Class ### - TA (name)</p>
+                            </div>
+                            <div class="chat-item">
+                                <span class="chat-badge yellow"></span>
+                                <p>Academic Advisor (name)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-box">
+                    <div class="messages">
+                        <div class="message received">Insert Message</div>
+                        <div class="message sent">Insert Message</div>
+                    </div>
+                    <div class="message-input">
+                        <button class="emoji-button">☺</button>
+                        <input type="text" placeholder="Type your message here...">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
