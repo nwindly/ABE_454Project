@@ -168,9 +168,10 @@ body {
 .message-dropdown {
     width: 100%;
     background: #fafafa;
-    padding: 15px;
+    
+    padding-top: 10px;
     padding-left: 30px;
-    padding-bottom: 25px;
+    padding-bottom: 23px;
     font-weight: normal;
     text-align: left;
     cursor: pointer;
