@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css">
+    <script type="module" src="./src/register.js"></script>
+    <title>454 Web</title>
+</head>
+<body>
+    <div class="form-container" id="form1">
+        <div class="text-section">
+            <div class="text">Who are You?</div>
+        </div>
+        <div class="form-section">
+            <form>
+                <div id="role" class="role-grid">
+                    <label class="role-option">
+                        <input type="radio" name="role" value="admin" class="role-radio">
+                        <span class="role-button">Admin</span>
+                    </label>
+                    <label class="role-option">
+                        <input type="radio" name="role" value="academic_staff" class="role-radio">
+                        <span class="role-button">Academic Staff</span>
+                    </label>
+                    <label class="role-option">
+                        <input type="radio" name="role" value="faculty" class="role-radio">
+                        <span class="role-button">Faculty</span>
+                    </label>
+                    <label class="role-option">
+                        <input type="radio" name="role" value="student" class="role-radio">
+                        <span class="role-button">Student</span>
+                    </label>
+                </div>
+                <div class="action-row">
+                    <a href="index.html" class="text-btn">Sign In</a>
+                    <button id="next1" type="button" class="round-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="form-container" id="form2" style="display:none;">
+        <div class="text-section">
+            <div class="text">Select Department</div>
+        </div>
+        <div class="form-section">
+            <form>
+                <div class="select-container">
+                    <label>
+                        <select id="department" class="select-field" required>
+                            <option value="" disabled selected hidden>Department</option>
+                            <option value="art">Arts</option>
+                            <option value="bus">Business & Economics</option>
+                            <option value="comm">Communications</option>
+                            <option value="edu">Education</option>
+                            <option value="ecs">Engineering & Computer Science</option>
+                            <option value="health">Health & Human Development</option>
+                            <option value="math">Natural Sciences and Mathematics</option>
+                            <option value="intern">Extension & International Programs</option>
+                        </select>
+                    </label>
+                    <div class="select-arrow">▼</div>
+                </div>
+                <div class="action-row">
+                    <button id="back1" type="button" class="round-btn">Back</button>
+                    <button id="next2" type="button" class="round-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="form-container" id="form3" style="display:none;">
+        <div class="text-section">
+            <div class="text">Final Steps</div>
+        </div>
+        <div class="form-section">
+
+            <form>
+                <div class="input-grid">
+                    <label>
+                        <input id="email" type="email" class="input-field" placeholder="Email" required>
+                    </label>
+                    <label>
+                        <input id="password" type="password" class="input-field" placeholder="Password" required>
+                    </label>
+                    <label>
+                        <input id="name" type="text" class="input-field" placeholder="Full Name" required>
+                    </label>
+                    <label>
+                        <input id="username" type="text" class="input-field" placeholder="Username" required>
+                    </label>
+                </div>
+                <div class="action-row">
+                    <button id="back2" type="button" class="round-btn">Back</button>
+                    <button id="createAccountBtn" type="submit" class="round-btn">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        /*testing*/
+        const role = document.getElementById("role");
+        const department = document.getElementById("department");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const name = document.getElementById("name");
+        const username = document.getElementById("username");
+        const button = document.getElementById("createAccountBtn");
+
+        button.addEventListener("click", () => {
+            const register={
+                role: role.value,
+                department: department.value,
+                email: email.value,
+                password: password.value,
+                name: name.value,
+                username: username.value
+            };
+
+            fetch("", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(register)
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css">
+    <script type="module" src="./src/files.js"></script>
+    <title>454 Web</title>
+</head>
+<body>
+
+<script>
+    /*testing*/
+    /*add variables later*/
+    const responseAPI = async () => {
+        e.preventDefault();
+        const res = await fetch("", {
+            method: "GET",
+        })
+        console.log(res)
+        const data = await res.json();
+        input.value = data.message;
+    }
+    button.addEventListener("click", responseAPI)
+</script>
+</body>
+</html>

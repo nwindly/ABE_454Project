@@ -1,27 +1,12 @@
-# ABE_454Project
+# React + Vite
 
-##Description
-This project uses Attribute-Based Encryption (ABE) to secure file-sharing and message-sharing in an AWS cloud environment. 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Technologies
+Currently, two official plugins are available:
 
-- **C++**
-- **HTML**
-- **CSS**
-- **JavaScript**
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Installation Instructions
+## Expanding the ESLint configuration
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/nwindly/abe-454-project.git
-   ```
-   Or Manually download the files in a zip folder by clicking the "Code" button.
-
-2. ... ?
-
-# The Team
-- **Windly Nguyen** - Project Manager, Cloud Developer
-- **Tien Cao** - Project Manager, Back-end Developer
-- **Caitlin Chau** - Front-end Developer, UX Designer
-- **Justin Ramirez** - Full Stack Developer
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
