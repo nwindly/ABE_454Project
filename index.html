@@ -29,7 +29,7 @@
             <header class="chat-header">
                 <h2>Messages</h2>
                 <div class="user-controls">
-                    <button class="user-notifications"><img src = "icons/notification_5184125.png" alt="Notifications" style ="width:38px; padding-right: px;" alt></button>
+                    <button class="user-notifications"><img src = "icons/notification_5184125.png" alt="Notifications" style ="width:36px; padding-right: px;" alt></button>
                     <button class="user-settings">User's Name<span class="settings-label">Settings</span></button>
                     <button class="user-profile"><img src="icons/square_9045726.png" alt="User Profile"></button>
                 </div>
@@ -43,31 +43,32 @@
                     </div>
                     <div class="message-dropdown" onclick="toggleMessageList()">
                         All Messages
-                        <button class="dropdown-toggle">▼</button>
+                        <button class="dropdown-toggle"><img src="icons/drop-down-13-512.png" alt="dropdown-menu" style ="width:30px"></button>
+                        <button class = "ellipsis-menu">⋮</button>
+                        
                     </div>
                     <div class="message-list-container" id="messageList">
-                        
-                        <div class="message-list">
-                            <div class="chat-item">
-                                <span class="chat-badge red"></span>
-                                <p>Class ### - Professor (name)</p>
-                            </div>
-                            <div class="chat-item">
-                                <span class="chat-badge purple"></span>
-                                <p>Class ### - TA (name)</p>
-                            </div>
-                            <div class="chat-item">
-                                <span class="chat-badge yellow"></span>
-                                <p>Academic Advisor (name)</p>
-                            </div>
+                        <div class="message-list" id = "chatList">
+                            
                         </div>
                     </div>
                 </div>
 
                 <div class="chat-box">
-                    <div class="messages">
-                        <div class="message received">Insert Message</div>
-                        <div class="message sent">Insert Message</div>
+                    <div class="chat-topbar">
+                        <div class="chat-topbar-left">
+                            <div class="chat-badge" id="activeChatBadge"></div>
+                            <div class="chat-info">
+                                <div class="chat-name" id="activeChatName">Select a Chat</div>
+                            </div>
+                        </div>
+                        <div class="chat-topbar-right">
+                            <button class="topbar-icon"><img src="icons/search-12-512.png" alt="Search" style="width: 20px;"></button>
+                            <button class="topbar-icon"><img src="icons/ellipsis.png" alt="Search" style="width: 20px;"></button>
+                        </div>
+                    </div>
+                    <div class="messages", id="messageContainer">
+                        
                     </div>
                     <div class="message-input">
                         <button class="emoji-button">☺</button>
