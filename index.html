@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class = "container">
+        <aside class="sidebar">
+            <h2>Logo | Website Name</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="navigateTo('home')"> <img src="icons/house_5075735.png" alt="Home" style="width:36px; vertical-align:middle; margin-right:8px;"> Home</a></li>
+                    <li><a href="#"> <img src="icons/folder_4051306.png" alt="My Files" style="width:36px; vertical-align:middle; margin-right:8px;"> My Files</a></li>
+                    <li><a href="#" onclick="navigateTo('messages')"> <img src="icons/message_4144845.png" alt="Messages" style="width:36px; vertical-align:middle; margin-right:8px;"> Messages</a></li>
+                    <li><a href="#"> <img src="icons/moon_8880836.png" alt="Log Out" style="width:36px; vertical-align:middle; margin-right:8px;"> Log Out</a></li>
+                </ul>
+            </nav>
+            <div class="settings">
+                <a href="#"><img src="icons/settings_4151678.png" alt="Settings" style="width: 36px; vertical-align:middle; margin-right:8px;"> Settings</a>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header class="chat-header">
+                <h2 id = "title">Welcome to the Message & File Sharing App!</h2>
+                <div class="user-controls">
+                    <button class="user-notifications"><img src="icons/notification_5184125.png" alt="Notifications" style="width:36px;"></button>
+                    <button class="user-settings">User's Name<span class="settings-label">Settings</span></button>
+                    <button class="user-profile"><img src="icons/square_9045726.png" alt="User Profile"></button>
+                </div>
+            </header>
+            
+            <div id="home" class="display">
+                <div class="search-bar">
+                    <img src="icons/search-12-512.png" alt="Search Icon" class="search-icon">
+                    <input type="text" id="chatSearch" placeholder="Search">
+                </div>
+                <div class="groups-section">
+                    <span id = "add-group-button" style="cursor: pointer;">
+                        <h3><img src="icons/plus_12760369.png" alt="Add New Groups Icon" style="width: 36px; vertical-align: middle;">My Groups</h3>
+                    </span>
+                    <div class="three-grid">
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/group_5225945.png" alt="Groups Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">Group Name</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/group_5225945.png" alt="Groups Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">Class ###</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/group_5225945.png" alt="Groups Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">Class ###</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/group_5225945.png" alt="Groups Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">Class ###</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/group_5225945.png" alt="Groups Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">Department Staff</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/group_5225945.png" alt="Groups Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">### Project Group</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/group_5225945.png" alt="Groups Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">### Project Group</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="folders-section">
+                    <h3><img src="icons/flare_12760416.png" alt="Suggestion Icons" style="width: 36px; vertical-align: middle;">Suggested Folders</h3>
+                    <div class="three-grid">
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/folder_6691151.png" alt="Folder Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">Folder Name</p>
+                            <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/folder_6691151.png" alt="Folder Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">Folder Name</p>
+                            <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/folder_6691151.png" alt="Folder Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">Folder Name</p>
+                            <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="files-section">
+                    <h3><img src="icons/flare_12760416.png" alt="Suggestion Icons" style="width: 36px; vertical-align: middle;">Suggested Files</h3>
+                    <div class="three-grid">
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/document_6690822.png" alt="Folder Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">File Name</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/document_6690822.png" alt="Folder Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">File Name</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-align">
+                                <img src="icons/document_6690822.png" alt="Folder Icon" style="width: 36px; vertical-align: middle;">
+                                <p class="box-label">File Name</p>
+                                <img src="icons/three-dots_8637643.png" alt="Three Dots Icon" style="width:20px; vertical-align: middle;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="messages" class="chat-section" style="display: none;">
+                <div class ="chat-container">
+                    <div class="message-list-wrapper">
+                        <div class="search-bar">
+                            <img src="icons/search-12-512.png" alt="Search Icon" class="search-icon">
+                            <input type="text" id="chatSearch" placeholder=" Search for Chat">
+                        </div>
+                        <div class="message-dropdown" onclick="toggleMessageList()">
+                            All Messages
+                            <button class="dropdown-toggle"><img src="icons/drop-down-13-512.png" alt="dropdown-menu" style ="width:30px"></button>
+                            <button class = "ellipsis-menu">⋮</button>
+                            
+                        </div>
+                        <div class="message-list-container" id="messageList">
+                            <div class="message-list" id = "chatList">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-box">
+                        <div class="chat-topbar">
+                            <div class="chat-topbar-left">
+                                <div class="chat-badge" id="activeChatBadge"></div>
+                                <div class="chat-info">
+                                    <div class="chat-name" id="activeChatName">Select a Chat</div>
+                                </div>
+                            </div>
+                            <div class="chat-topbar-right">
+                                <button class="topbar-icon"><img src="icons/search-12-512.png" alt="Search" style="width: 20px;"></button>
+                                <button class="topbar-icon"><img src="icons/ellipsis.png" alt="Search" style="width: 20px;"></button>
+                            </div>
+                        </div>
+                        <div class="messages", id="messageContainer">
+                            
+                        </div>
+                        <div class="message-input">
+                            <button class="emoji-button">☺</button>
+                            <input type="text" placeholder="Type your message here...">
+                            <button>Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
